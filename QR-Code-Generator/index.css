@@ -1,0 +1,32 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    list-style: none;
+    font-family: poppins;
+  }
+  body {
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+  h2 {
+    margin-bottom: 15px;
+  }
+  .Qr-code-btn {
+    padding: 8px;
+    text-transform: capitalize;
+    cursor: pointer;
+    font-weight: 600;
+    margin-top: 15px;
+  }
+  input {
+    padding: 5px;
+    width: 450px;
+    text-transform: capitalize;
+    margin-bottom: 10px;
+  }
