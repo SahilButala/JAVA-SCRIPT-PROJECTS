@@ -1,5 +1,5 @@
 const scrollbar = document.querySelector(".progress-bar");
-console.log(scrollbar)
+console.log(scrollbar);
 const scrollcontent = document.querySelector(".scroll-content");
 
 function fetchData() {
@@ -13,27 +13,30 @@ function fetchData() {
     console.log("error", e.message);
   }
 }
-function displayData(getData){
-    console.log(getData)
-    scrollcontent.innerHTML  = getData.map((item)=>{
-        console.log(item)
-        return `<div class="box">
-          <p>${item.description.slice(0,200)+ "...."}</p>
+function displayData(getData) {
+  console.log(getData);
+  scrollcontent.innerHTML = getData
+    .map((item) => {
+      console.log(item);
+      return `<div class="box">
+          <p>${item.description.slice(0, 200) + "...."}</p>
           <h5 class="title">${item.title}</h5>
           <div class="price">${item.price}$</div>
-        </div>`
-    }).join("")
+        </div>`;
+    })
+    .join("");
 }
 fetchData();
 
+window.onscroll = function () {
+  handleScroll();
+};
+function handleScroll() {
+  let topheight = document.body.scrollTop || document.documentElement.scrollTop;
+  let height =
+    document.documentElement.scrollHeight -
+    document.documentElement.clientHeight;
 
-window.onscroll = function(){
-      handleScroll()
-}
-function handleScroll(){
-    let topheight = document.body.scrollTop || document.documentElement.scrollTop
-    let height = document.documentElement.scrollHeight - document.documentElement.clientHeight
-
-    let alreadyScrolled = (topheight/height)*100
-    scrollbar.style.width = `${alreadyScrolled}%`
+  let alreadyScrolled = (topheight / height) * 100;
+  scrollbar.style.width = `${alreadyScrolled}%`;
 }
