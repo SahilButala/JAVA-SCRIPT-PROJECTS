@@ -1,0 +1,108 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: poppins;
+}
+
+body {
+  height: 100vh;
+  width: 100%;
+  background-image: linear-gradient(to top, #0e0e10 0%, #202030 100%);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.container {
+  width: 1120px;
+  min-height: 600px;
+  display: grid;
+  grid-template-columns: repeat(2, minmax(200px, 1fr));
+  gap: 25px;
+  padding: 8px;
+}
+.time {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 20px;
+  text-transform: capitalize;
+}
+.left-container {
+  width: 100%;
+  height: 700px;
+}
+.image {
+  width: 100%;
+  height: 100%;
+}
+.image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 30px;
+}
+.categories {
+  display: flex;
+  width: 250px;
+  gap: 8px;
+  justify-content: space-between;
+  border-radius: 20px;
+}
+
+.description {
+  padding: 15px 0;
+}
+.names {
+  display: flex;
+  align-items: center;
+  color: white;
+  gap: 12px;
+  margin-top: 15px;
+}
+.names h5 {
+  font-size: 17px;
+}
+.right-container {
+  flex-direction: column;
+  align-items: flex-start;
+  display: flex;
+  justify-content: center;
+}
+.content > * {
+  margin: 7px 0;
+  color: white;
+}
+.content .title {
+  font-size: 35px;
+  margin-bottom: 29px;
+}
+.cast {
+  text-transform: capitalize;
+}
+.input-sec {
+  margin-bottom: 25px;
+}
+.error{
+    color: white;
+    text-align: center;
+}
+input {
+  width: 600px;
+  padding: 8px;
+  background: transparent;
+  color: white;
+  font-size: 16px;
+  border: none;
+}
+.btn {
+  padding: 8px;
+  width: 90px;
+  font-size: 18px;
+  font-weight: 500;
+  background-color: #e67b19;
+  color: white;
+  border: none;
+  cursor: pointer;
+}
